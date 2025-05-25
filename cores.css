@@ -1,0 +1,116 @@
+:root {
+    --vermelho: hsl(00 50% 50%);
+    --laranja: hsl(30 50% 50%);
+    --amarelo: hsl(60 50% 50%);
+    --limao: hsl(90 50% 50%);
+    --verde: hsl(120 50% 50%);
+    --primavera: hsl(150 50% 50%);
+    --ciano: hsl(180 50% 50%);
+    --celeste: hsl(210 50% 50%);
+    --azul: hsl(240 50% 50%);
+    --violeta: hsl(270 50% 50%);
+    --magenta: hsl(300 50% 50%);
+    --rosa: hsl(330 50% 50%);
+
+    /* Cores próprias de marcas (brands) */
+    --brand-telegram-ciano: #0088cc;
+    --brand-discord-azoxo: #5865f2;
+    /* ...sim, o próprio discord chama essa cor de "azoxo" */
+    --brand-instagram-rosa: #ff0069;
+}
+
+.vermelho {
+    --base-color: hsl(00 50% 50%);
+}
+
+.laranja {
+    --base-color: hsl(30 50% 50%);
+}
+
+.amarelo {
+    --base-color: hsl(60 50% 50%);
+}
+
+.limao {
+    --base-color: hsl(90 50% 50%);
+}
+
+.verde {
+    --base-color: hsl(120 50% 50%);
+}
+
+.primavera {
+    --base-color: hsl(150 50% 50%);
+}
+
+.ciano {
+    --base-color: hsl(180 50% 50%);
+}
+
+.celeste {
+    --base-color: hsl(210 50% 50%);
+}
+
+.azul {
+    --base-color: hsl(240 50% 50%);
+}
+
+.violeta {
+    --base-color: hsl(270 50% 50%);
+}
+
+.magenta {
+    --base-color: hsl(300 50% 50%);
+}
+
+.rosa {
+    --base-color: hsl(330 50% 50%);
+}
+
+.vermelho,
+.laranja,
+.amarelo,
+.limao,
+.verde,
+.primavera,
+.ciano,
+.celeste,
+.azul,
+.violeta,
+.magenta,
+.rosa {
+    @media (prefers-color-scheme: light) {
+        --fundo: hsl(from var(--base-color) h s 70%);
+        --meio: hsl(from var(--base-color) h s 80%);
+        --frente: hsl(from var(--base-color) h s 90%);
+        --texto: hsl(from var(--base-color) h s 10%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        --fundo: hsl(from var(--base-color) h s 10%);
+        --meio: hsl(from var(--base-color) h s 20%);
+        --frente: hsl(from var(--base-color) h s 30%);
+        --texto: hsl(from var(--base-color) h s 90%);
+    }
+}
+
+
+.claro :is(.vermelho, .laranja, .amarelo, .limao,
+    .verde, .primavera, .ciano, .celeste,
+    .azul, .violeta, .magenta, .rosa) {
+
+    --fundo: hsl(from var(--base-color) h s 70%);
+    --meio: hsl(from var(--base-color) h s 80%);
+    --frente: hsl(from var(--base-color) h s 90%);
+    --texto: hsl(from var(--base-color) h s 10%);
+}
+
+.escuro :is(.vermelho, .laranja, .amarelo, .limao,
+    .verde, .primavera, .ciano, .celeste,
+    .azul, .violeta, .magenta, .rosa) {
+
+    --fundo: hsl(from var(--base-color) h s 10%);
+    --meio: hsl(from var(--base-color) h s 20%);
+    --frente: hsl(from var(--base-color) h s 30%);
+    --texto: hsl(from var(--base-color) h s 90%);
+}

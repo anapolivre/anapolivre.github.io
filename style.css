@@ -1,104 +1,144 @@
-/* Reset */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    line-height: 1;
-}
+/* Reset de estilos */
+@import url("reset.css");
 
-/* Cores */
+/* Paleta de cores */
+@import url("cores.css");
 
-:root,
+/* Estilos reutilizáveis */
+@import url("reutilizaveis.css");
+
+
+/* (revisar duplicidade desses temas com o arquivo cores.css)... */
 .claro {
-    --background: #eee;
-    --texto: #333;
+    --fundo: hsl(from var(--base-color) h s 70%);
+    --meio: hsl(from var(--base-color) h s 80%);
+    --frente: hsl(from var(--base-color) h s 90%);
+    --texto: hsl(from var(--base-color) h s 10%);
 }
 
 .escuro {
-    --background: #333;
-    --texto: #eee;
+    --fundo: hsl(from var(--base-color) h s 10%);
+    --meio: hsl(from var(--base-color) h s 20%);
+    --frente: hsl(from var(--base-color) h s 30%);
+    --texto: hsl(from var(--base-color) h s 90%);
 }
 
-/* Base */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--texto);
-    background-color: var(--background);
+    --base-color: var(--celeste);
 
     /* Layout */
     display: grid;
     min-height: 100vh;
-    /* min-width: 100vw; */
-
-    /* Visual */
-    font-size: 20px;
-}
-
-body > section,
-body > footer {
-    padding: 32px 0;
-    /* margin-top: -32px; */
-    mask-image:
-        url("assets/pattern_cog.svg"),
-        linear-gradient(transparent 32px, black 32px);
-    mask-position: top;
-
-    background-image:
-        linear-gradient(to bottom, var(--fundo) -64px, transparent 128px)
-        /* radial-gradient(at top center, var(--fundo), transparent); */
-}
-@media screen and (min-width: 1000px) {
-    body {
-        display: grid;
-        grid-template:
-        "header      header"
-        "destaque    eventos"
-        "sobre       sobre"
-        "participe   participe"
-        "footer      footer"
-        / 1fr        1fr;
-    }
-    header      { grid-area: header; }
-    #destaque   { grid-area: destaque; }
-    #eventos    { grid-area: eventos; }
-    #sobre      { grid-area: sobre; }
-    #participe  { grid-area: participe; }
-    footer      { grid-area: footer; }
-}
-.container {
     max-width: 1000px;
     margin: auto;
-    padding: 1em;
+
+    /* Visual */
+    background-color: var(--fundo);
+    color: var(--texto);
+    gap: 1em;
+
+    header {
+        display: grid;
+        place-items: center;
+
+        .cabecalho {
+            /* Layout */
+            display: grid;
+            place-items: center;
+            width: min(100%, 700px);
+
+            /* Visual */
+            background-color: var(--meio);
+            padding: 32px;
+            gap: 16px;
+        }
+    }
+
+    footer {
+        padding: 32px;
+        text-align: center;
+    }
 }
 
-body > footer {
-    /* background-color: #566069; */
-    /* background-image: radial-gradient(at top center, #566069, transparent); */
-    --fundo: #3d7bb1;
-    /* color: white; */
-    text-align: center;
+@media screen and (min-width: 700px) {
+    body header {
+        grid-template-columns: 1fr 2fr;
+        margin-top: 32px;
+    }
 }
 
-h1 {
-    font-size: 2.5em;
-    /* opacity: 90%; */
-    text-shadow: var(--fundo) 0px 3px 0;
-    text-decoration: var(--fundo) underline solid;
-}
-section h1 {
-    margin-bottom: 1em;
+ul.redes-sociais {
+    /* Layout */
+    display: grid;
+    grid-template-columns: repeat(3, 96px);
+    max-width: 400px;
+
+    /* Visual */
+    gap: .5em;
+
+    .telegram {
+        background-color: var(--brand-telegram-ciano);
+        color: white;
+    }
+
+    .github {
+        background-color: white;
+        color: black;
+    }
+
+    .discord {
+        background-color: var(--brand-discord-azoxo);
+        color: white;
+    }
+
+    .instagram {
+        background-color: var(--brand-instagram-rosa);
+        color: white;
+    }
+
+    li {
+        display: grid;
+        list-style: none;
+        height: 64px;
+        border-radius: 16px;
+        overflow: hidden;
+
+        box-shadow: #0003 0px 4px 8px;
+
+        &:first-child {
+            border-top-left-radius: 32px;
+            border-bottom-left-radius: 32px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 32px;
+            border-bottom-right-radius: 32px;
+        }
+
+        a:link {
+            display: grid;
+            place-content: center;
+            place-items: center;
+
+            text-decoration: none;
+            box-shadow:
+                inset #0003 0px -4px 2px,
+                inset #fff3 0px 4px 2px;
+
+            img {
+                max-width: 32px;
+                max-height: 32px;
+            }
+        }
+
+        &:hover {
+            scale: 110%;
+        }
+    }
 }
 
-p {
-    line-height: 1.5;
-    margin-bottom: 1.5em;
-    hyphens: auto;
+#sobre {
+    padding: 32px;
+    background-color: var(--meio);
 }
-
-b, strong {
-    text-shadow: var(--fundo) 0px 2px 4px;
-}
-
-/* Especificos */
-header .marca { max-height: 64px; }
-footer .marca { max-height: 128px; }

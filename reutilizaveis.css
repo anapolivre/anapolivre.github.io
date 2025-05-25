@@ -1,0 +1,44 @@
+/* Estilos reutilizáveis */
+h1 {
+    /* Layout (fluxos, tamanhos, posições) */
+    display: inline-block;
+    padding: 0.25em 0.5em;
+
+    /* Visual (cores, decorações, estilos) */
+    background-color: var(--texto);
+    color: var(--meio);
+    font-family: monospace;
+    font-size: 48px;
+    border-radius: .75em;
+}
+
+p {
+    line-height: 1.5;
+    margin: 1em 0;
+}
+
+.borda-chanfro {
+    /* 
+     * Essa máscara corta/clipa círculos nos cantos do elemento.
+     * Lembre de adicionar padding interno para compensar!
+     */
+    mask-image:
+        radial-gradient(circle at top right,
+            transparent 32px, black 32px,
+            black 64px, transparent 64px),
+        radial-gradient(circle at top left,
+            transparent 32px, black 32px,
+            black 64px, transparent 64px),
+        radial-gradient(circle at bottom right,
+            transparent 32px, black 32px,
+            black 64px, transparent 64px),
+        radial-gradient(circle at bottom left,
+            transparent 32px, black 32px,
+            black 64px, transparent 64px),
+        linear-gradient(to right,
+            transparent 32px, black 32px,
+            black calc(100% - 32px), transparent calc(100% - 32px)),
+        linear-gradient(to bottom,
+            transparent 32px, black 32px,
+            black calc(100% - 32px), transparent calc(100% - 32px));
+}
