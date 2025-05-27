@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 240 240"
+   id="svg2"
+   version="1.1"
+   sodipodi:docname="telegram-logo.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.458125"
+     inkscape:cx="265.21146"
+     inkscape:cy="476.94407"
+     inkscape:window-width="1920"
+     inkscape:window-height="983"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <style
+     id="style1">.st0{fill:url(#path2995-1-0_1_)}.st1{fill:#c8daea}.st2{fill:#a9c9dd}.st3{fill:url(#path2991_1_)}</style>
+  <linearGradient
+     id="path2995-1-0_1_"
+     gradientUnits="userSpaceOnUse"
+     x1="-683.305"
+     y1="534.845"
+     x2="-693.305"
+     y2="511.512"
+     gradientTransform="matrix(10.130344,0,0,-10.130344,7101.4951,5399.5973)">
+    <stop
+       offset="0"
+       stop-color="#37aee2"
+       id="stop1" />
+    <stop
+       offset="1"
+       stop-color="#1e96c8"
+       id="stop2" />
+  </linearGradient>
+  <path
+     id="path2993"
+     class="st1"
+     d="m 82.855403,212.86147 c -6.584723,0 -5.40285,-2.53258 -7.766597,-8.77962 L 55.841154,140.59836 175.37921,65.971497 l 14.01364,3.71446 -11.64989,31.741743 z"
+     style="stroke-width:1" />
+  <path
+     id="path2989"
+     class="st2"
+     d="m 82.855403,212.86147 c 5.065172,0 7.26008,-2.36374 10.130343,-5.06517 4.389816,-4.22097 60.782064,-59.09366 60.782064,-59.09366 l -34.61201,-8.44196 -32.07942,20.26069 -4.220977,50.65172 z"
+     style="stroke-width:1" />
+  <linearGradient
+     id="path2991_1_"
+     gradientUnits="userSpaceOnUse"
+     x1="128.991"
+     y1="118.245"
+     x2="153.991"
+     y2="78.245"
+     gradientTransform="matrix(1.6883906,0,0,-1.6883906,-82.606874,325.98365)">
+    <stop
+       offset="0"
+       stop-color="#eff7fc"
+       id="stop3" />
+    <stop
+       offset="1"
+       stop-color="#ffffff"
+       id="stop4" />
+  </linearGradient>
+  <path
+     id="path2991"
+     class="st3"
+     d="m 86.232184,161.19673 81.718096,60.27554 c 9.28616,5.06517 16.03972,2.53259 18.40347,-8.61079 L 219.61504,56.178832 c 3.37678,-13.675963 -5.23401,-19.75417 -14.18248,-15.702033 L 10.254608,115.77902 c -13.3382855,5.40285 -13.1694468,12.83177 -2.3637467,16.03971 L 58.036062,147.52076 174.0285,74.41345 c 5.40284,-3.376781 10.46801,-1.519551 6.41588,2.194908 z"
+     style="fill:url(#path2991_1_);stroke-width:1" />
+</svg>

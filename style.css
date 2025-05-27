@@ -1,0 +1,144 @@
+/* Reset de estilos */
+@import url("reset.css");
+
+/* Paleta de cores */
+@import url("cores.css");
+
+/* Estilos reutilizáveis */
+@import url("reutilizaveis.css");
+
+
+/* (revisar duplicidade desses temas com o arquivo cores.css)... */
+.claro {
+    --fundo: hsl(from var(--base-color) h s 70%);
+    --meio: hsl(from var(--base-color) h s 80%);
+    --frente: hsl(from var(--base-color) h s 90%);
+    --texto: hsl(from var(--base-color) h s 10%);
+}
+
+.escuro {
+    --fundo: hsl(from var(--base-color) h s 10%);
+    --meio: hsl(from var(--base-color) h s 20%);
+    --frente: hsl(from var(--base-color) h s 30%);
+    --texto: hsl(from var(--base-color) h s 90%);
+}
+
+
+body {
+    --base-color: var(--celeste);
+
+    /* Layout */
+    display: grid;
+    min-height: 100vh;
+    max-width: 1000px;
+    margin: auto;
+
+    /* Visual */
+    background-color: var(--fundo);
+    color: var(--texto);
+    gap: 1em;
+
+    header {
+        display: grid;
+        place-items: center;
+
+        .cabecalho {
+            /* Layout */
+            display: grid;
+            place-items: center;
+            width: min(100%, 700px);
+
+            /* Visual */
+            background-color: var(--meio);
+            padding: 32px;
+            gap: 16px;
+        }
+    }
+
+    footer {
+        padding: 32px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    body header {
+        grid-template-columns: 1fr 2fr;
+        margin-top: 32px;
+    }
+}
+
+ul.redes-sociais {
+    /* Layout */
+    display: grid;
+    grid-template-columns: repeat(3, 96px);
+    max-width: 400px;
+
+    /* Visual */
+    gap: .5em;
+
+    .telegram {
+        background-color: var(--brand-telegram-ciano);
+        color: white;
+    }
+
+    .github {
+        background-color: white;
+        color: black;
+    }
+
+    .discord {
+        background-color: var(--brand-discord-azoxo);
+        color: white;
+    }
+
+    .instagram {
+        background-color: var(--brand-instagram-rosa);
+        color: white;
+    }
+
+    li {
+        display: grid;
+        list-style: none;
+        height: 64px;
+        border-radius: 16px;
+        overflow: hidden;
+
+        box-shadow: #0003 0px 4px 8px;
+
+        &:first-child {
+            border-top-left-radius: 32px;
+            border-bottom-left-radius: 32px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 32px;
+            border-bottom-right-radius: 32px;
+        }
+
+        a:link {
+            display: grid;
+            place-content: center;
+            place-items: center;
+
+            text-decoration: none;
+            box-shadow:
+                inset #0003 0px -4px 2px,
+                inset #fff3 0px 4px 2px;
+
+            img {
+                max-width: 32px;
+                max-height: 32px;
+            }
+        }
+
+        &:hover {
+            scale: 110%;
+        }
+    }
+}
+
+#sobre {
+    padding: 32px;
+    background-color: var(--meio);
+}
